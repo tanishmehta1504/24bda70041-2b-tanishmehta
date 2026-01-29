@@ -3,23 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Banking UI</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Product Filter</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="container">
-    <h1>Balance: $<span id="balance">1000</span></h1>
+    <h1>Product Filter</h1>
 
-    <label>Amount</label>
-    <input type="number" id="amount" placeholder="Enter amount">
-
-    <div class="buttons">
-        <button class="deposit" onclick="deposit()">Deposit</button>
-        <button class="withdraw" onclick="withdraw()">Withdraw</button>
+    <div class="filter">
+        <label>Filter by:</label>
+        <select id="categoryFilter" onchange="filterProducts()">
+            <option value="all">All Products</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+        </select>
     </div>
 
-    <p id="message"></p>
+    <div class="products">
+        <div class="card electronics">
+            <h2>Wireless Headphones</h2>
+            <p class="price">$129.99</p>
+            <span class="tag electronics-tag">electronics</span>
+        </div>
+
+        <div class="card clothing">
+            <h2>Cotton T-Shirt</h2>
+            <p class="price">$24.99</p>
+            <span class="tag clothing-tag">clothing</span>
+        </div>
+
+        <div class="card electronics">
+            <h2>Bluetooth Speaker</h2>
+            <p class="price">$89.99</p>
+            <span class="tag electronics-tag">electronics</span>
+        </div>
+
+        <div class="card clothing">
+            <h2>Denim Jeans</h2>
+            <p class="price">$59.99</p>
+            <span class="tag clothing-tag">clothing</span>
+        </div>
+    </div>
 </div>
 
 <script src="script.js"></script>
